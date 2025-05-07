@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anu's Café & Cowork</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <style>
+    /* Custom colors */
+    :root {
+      --primary-color: #5C4033; /* Dark Brown */
+      --secondary-color: #D9B382; /* Light Beige */
+      --background-light: #FAF3E0; /* Cream */
+      --text-color: #3B2F2F; /* Coffee Brown */
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--background-light);
+      color: var(--text-color);
+    }
+    header {
+      background: var(--primary-color);
+    }
+    .nav-link {
+      color: #fff;
+      font-weight: 500;
+      font-family: 'Raleway', sans-serif;
+    }
+    .nav-link:hover {
+      color: var(--secondary-color);
+    }
+    .hero {
+      height: 100vh;
+      background: url('your-hero-image.jpg') no-repeat center center/cover;
+      position: relative;
+      animation: slideBackground 20s infinite alternate;
+    }
+    @keyframes slideBackground {
+      0% {
+        background-image: url('your-hero-image.jpg');
+      }
+      50% {
+        background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('your-animated-background.jpg');
+      }
+      100% {
+        background-image: url('your-hero-image.jpg');
+      }
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: var(--primary-color);
+      animation: fadeInUp 2s ease-out;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .explore-btn {
+      margin-top: 20px;
+      padding: 10px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+    }
+    .explore-btn:hover {
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="flex justify-between items-center p-3 bg-white fixed w-full z-10 shadow-md">
+  <div class="text-2xl font-bold text-[#6f4e37]">
+    <span style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">Anu's Café & Cowork</span>
+  </div>
+
+  <!-- Hamburger Icon (shown on small screens) -->
+  <div class="md:hidden flex flex-col cursor-pointer space-y-1" onclick="toggleMenu()">
+    <div class="w-6 h-0.5 bg-[#5a381e]"></div>
+    <div class="w-6 h-0.5 bg-[#5a381e]"></div>
+    <div class="w-6 h-0.5 bg-[#5a381e]"></div>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul id="navLinks" class="hidden md:flex gap-8 items-center text-lg text-[#5a381e] absolute md:static top-12 left-0 w-full md:w-auto bg-white md:bg-transparent flex-col md:flex-row p-2 md:p-0 z-10 shadow md:shadow-none">
+    <li><a href="#home" class="hover:text-[#6f4e37] transition">Home</a></li>
+    <li><a href="#about" class="hover:text-[#6f4e37] transition">About</a></li>
+    <li><a href="#menu" class="hover:text-[#6f4e37] transition">Menu</a></li>
+    <li><a href="#gallery" class="hover:text-[#6f4e37] transition">Gallery</a></li>
+    <li><a href="#reviews" class="hover:text-[#6f4e37] transition">Reviews</a></li>
+    <li><a href="#book" class="hover:text-[#6f4e37] transition">Book a Table</a></li>
+  </ul>
+</header>
+
+<!-- JavaScript for toggle -->
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("hidden");
+    nav.classList.toggle("flex");
+  }
+</script>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h1 class="text-4xl md:text-6xl font-bold" style="font-family: 'Playfair Display', serif;">Welcome to Anu's Café & Cowork</h1>
+    <p class="text-lg md:text-2xl mt-4" style="font-family: 'Raleway', sans-serif;">Where Coffee Meets Creativity</p>
+    <a href="#menu"><button class="explore-btn mt-4">Explore More</button></a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white px-4 md:px-20" data-aos="fade-right">
+  <div class="text-center">
+    <h2 class="text-4xl font-bold mb-6" style="color: var(--primary-color); font-family: 'Playfair Display', serif;">About Us</h2>
+    <p class="max-w-3xl mx-auto text-lg" style="font-family: 'Raleway', sans-serif;">
+      Welcome to <b>Anu's Café & Cowork</b> - a space where flavors, conversations, and creativity blend beautifully. Whether you're here for a coffee catch-up, coworking session, or a cozy date, our café offers the perfect vibe. 
+      <br><br>
+      Open Daily: <b>11:00 AM – 10:00 PM</b> | Pune, India
+    </p>
+  </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="py-20 bg-[var(--background-light)] px-4 md:px-20" data-aos="fade-left">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold" style="color: var(--primary-color); font-family: 'Playfair Display', serif;">Our Menu</h2>
+    <p class="mt-4 text-lg" style="font-family: 'Raleway', sans-serif;">Tasty dishes curated specially for you!</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- Drinks Section -->
+    <div class="p-6 rounded-lg shadow-lg bg-white">
+      <h3 class="text-2xl font-bold mb-4" style="color: var(--secondary-color);">Drinks</h3>
+      <ul class="text-lg space-y-2">
+        <li>Cold Coffee - ₹80</li>
+        <li>Cold Coffee with Ice Cream - ₹100</li>
+        <li>Kitkat Shake - ₹100</li>
+        <li>Oreo Shake - ₹100</li>
+        <li>Chocolate Shake - ₹100</li>
+        <li>Strawberry Shake - ₹100</li>
+      </ul>
+    </div>
+
+    <!-- Fast Food Section -->
+    <div class="p-6 rounded-lg shadow-lg bg-white">
+      <h3 class="text-2xl font-bold mb-4" style="color: var(--secondary-color);">Quick Bites</h3>
+      <ul class="text-lg space-y-2">
+        <li>Garlic Bread – ₹60</li>
+        <li>Hara Bara Kabab – ₹75</li>
+        <li>Cheese Corn Poppers – ₹80</li>
+        <li>Mozzarella Stick – ₹90</li>
+        <li>Sizzling Brownie – ₹160</li>
+      </ul>
+    </div>
+
+    <!-- Pizza Section -->
+    <div class="p-6 rounded-lg shadow-lg bg-white">
+      <h3 class="text-2xl font-bold mb-4" style="color: var(--secondary-color);">Pizza</h3>
+      <ul class="text-lg space-y-2">
+        <li>Veggie Pizza - ₹160</li>
+        <li>Paneer Pizza - ₹180</li>
+        <li>Cheese Burst Pizza - ₹200</li>
+      </ul>
+    </div>
+
+    <!-- Sandwiches Section -->
+    <div class="p-6 rounded-lg shadow-lg bg-white">
+      <h3 class="text-2xl font-bold mb-4" style="color: var(--secondary-color);">Sandwiches</h3>
+      <ul class="text-lg space-y-2">
+        <li>Veg Sandwich - ₹80</li>
+        <li>Paneer Sandwich - ₹100</li>
+        <li>Cheese Grilled Sandwich - ₹120</li>
+      </ul>
+    </div>
+
+    <!-- Pasta Section -->
+    <div class="p-6 rounded-lg shadow-lg bg-white">
+      <h3 class="text-2xl font-bold mb-4" style="color: var(--secondary-color);">Pasta</h3>
+      <ul class="text-lg space-y-2">
+        <li>Red Sauce Pasta - ₹150</li>
+        <li>White Sauce Pasta - ₹150</li>
+        <li>Mix Sauce Pasta - ₹160</li>
+      </ul>
+    </div>
+
+    <!-- Special Limited Offers -->
+    <div class="p-6 rounded-lg shadow-lg bg-yellow-100 border-l-8 border-yellow-500">
+      <h3 class="text-2xl font-bold mb-4 text-yellow-700">Special Limited Offer!</h3>
+      <ul class="text-lg space-y-2">
+        <li>Combo: Cold Coffee + Burger + Fries - ₹199</li>
+        <li>2 Shakes + Fries - ₹180</li>
+        <li>Pizza + Cold Coffee - ₹220</li>
+      </ul>
+      <p class="mt-4 font-semibold text-yellow-600">* Offer Valid Till Stocks Last!</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Book a Table Section -->
+<section id="book" class="py-20 bg-[var(--background-dark)] text-white px-4 md:px-20" data-aos="fade-up">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold" style="font-family: 'Playfair Display', serif;">Book a Table</h2>
+    <p class="mt-4 text-lg" style="font-family: 'Raleway', sans-serif;">Reserve your spot now!</p>
+  </div>
+
+  <form action="https://formsubmit.co/anuscafe@gmail.com" method="POST" class="max-w-3xl mx-auto space-y-6">
+    <div class="flex flex-col md:flex-row gap-4">
+      <input type="text" name="name" required placeholder="Full Name" class="p-3 rounded-md w-full text-black">
+      <input type="email" name="email" required placeholder="Email" class="p-3 rounded-md w-full text-black">
+    </div>
+    <div class="flex flex-col md:flex-row gap-4">
+      <input type="text" name="phone" required placeholder="Phone Number" class="p-3 rounded-md w-full text-black">
+      <input type="number" name="people" required placeholder="Number of People" class="p-3 rounded-md w-full text-black">
+    </div>
+      <div class="flex flex-col md:flex-row gap-4">
+      <input type="date" name="date" required class="p-3 rounded-md w-full text-black">
+      <input type="time" name="time" required class="p-3 rounded-md w-full text-black">
+    </div>
+    <textarea name="message" rows="4" placeholder="Special Request" class="p-3 rounded-md w-full text-black"></textarea>
+    <button type="submit" class="px-6 py-3 bg-[var(--primary-color)] text-white rounded-full hover:bg-[var(--hover-color)] transition duration-300 font-bold tracking-wider">
+      Submit
+    </button>
+  </form>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-white px-4 md:px-20" data-aos="fade-up">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold" style="color: var(--primary-color); font-family: 'Playfair Display', serif;">Gallery</h2>
+    <p class="mt-4 text-lg" style="font-family: 'Raleway', sans-serif;">Our delicacies captured</p>
+  </div>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <!-- Replace src with your images -->
+    <img src="gallery1.jpg" alt="Gallery Image 1" class="rounded-lg shadow-md hover:scale-105 transition">
+    <img src="gallery2.jpg" alt="Gallery Image 2" class="rounded-lg shadow-md hover:scale-105 transition">
+    <img src="gallery3.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md hover:scale-105 transition">
+    <img src="gallery4.jpg" alt="Gallery Image 4" class="rounded-lg shadow-md hover:scale-105 transition">
+  </div>
+</section>
+
+<!-- Reviews Section (Continuous Loop) -->
+<section id="reviews" class="py-20 bg-[var(--background-light)] px-4 md:px-20" data-aos="fade-right">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold" style="color: var(--primary-color); font-family: 'Playfair Display', serif;">What Our Customers Say</h2>
+  </div>
+
+  <div class="overflow-hidden relative">
+    <div id="reviewSlider" class="flex animate-slide infinite whitespace-nowrap">
+      <!-- Each Review Card -->
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Subodh Tambade</h4>
+        <p class="text-sm">★★★★★<br>It's the best place as a cafe.</p>
+      </div>
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Tanisha Dusane</h4>
+        <p class="text-sm">★★★★★<br>Ambiance is great and food is awesome!</p>
+      </div>
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Shivkumar Kanje</h4>
+        <p class="text-sm">★★★★★<br>Perfect for birthdays and college groups.</p>
+      </div>
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Samyak Dolas</h4>
+        <p class="text-sm">★★★★★<br>Fun place with games!</p>
+      </div>
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Sonal Chougule</h4>
+        <p class="text-sm">★★★★★<br>Time well spent!</p>
+      </div>
+      <!-- Duplicates to ensure continuous loop -->
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Subodh Tambade</h4>
+        <p class="text-sm">★★★★★<br>It's the best place as a cafe.</p>
+      </div>
+      <div class="p-6 m-2 bg-white rounded-lg shadow-md min-w-[300px]">
+        <h4 class="font-bold text-xl mb-2">Tanisha Dusane</h4>
+        <p class="text-sm">★★★★★<br>Ambiance is great and food is awesome!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Review Slider Animation -->
+<style>
+  @keyframes slide {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+  }
+  .animate-slide {
+    animation: slide 30s linear infinite;
+  }
+</style>
+
+<!-- Founder Section -->
+<section id="founder" class="py-20 bg-white px-4 md:px-20" data-aos="fade-up">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold" style="color: var(--primary-color); font-family: 'Playfair Display', serif;">Meet Our Founder</h2>
+    <p class="mt-4 text-lg" style="font-family: 'Raleway', sans-serif;">The heart and soul behind Anu's Café & Co-Work</p>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center gap-10">
+    <div class="w-full md:w-1/2">
+      <img src="founder.jpg" alt="Founder Image" class="rounded-2xl shadow-lg w-full object-cover">
+    </div>
+    <div class="w-full md:w-1/2 text-left">
+      <h3 class="text-2xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">Anuja Sharma</h3>
+      <p class="text-lg mb-6" style="font-family: 'Raleway', sans-serif;">
+        Anuja envisioned a vibrant, cozy space where creativity meets comfort.  
+        Her passion for great food, a welcoming ambiance, and creating memories shines through every corner of Anu’s Café & Co-Work.  
+        With a perfect blend of delicious menus, refreshing environment, and supportive community, she has made this café a second home for many.
+      </p>
+      <a href="#book" class="px-6 py-3 bg-[var(--primary-color)] text-white rounded-full hover:bg-[var(--hover-color)] transition duration-300 font-bold tracking-wider">
+        Book a Table
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#5C4033] text-white pt-12 pb-6 px-6 md:px-12">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- About & Note -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#D2B48C]">Anu’s Café + Cowork</h3>
+      <p class="text-sm text-gray-300">
+        A cozy and creative space to unwind, connect, and co-work — where every sip and bite feels like home.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#D2B48C]">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+        <li><a href="#menu" class="hover:text-white transition">Menu</a></li>
+        <li><a href="#book" class="hover:text-white transition">Book a Table</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact - 086697 67012</a></li>
+        <li><a href="#Email" class="hover:text-white transition">Email - anuscafe@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#D2B48C]">Follow Us</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="https://www.instagram.com/anu_scafe/" target="_blank" class="hover:text-white transition">Instagram</a></li>
+        <li><a href="https://www.swiggy.com/menu/726662?source=sharing" target="_blank" class="hover:text-white transition">Swiggy</a></li>
+        <li><a href="https://search.app/r4oo9uHaWMtQ25WW7" target="_blank" class="hover:text-white transition">JustDial</a></li>
+        <li><a href="https://maps.app.goo.gl/BWhtT8wth5YErUdb8?g_st=iw" target="_blank" class="hover:text-white transition">Google Maps</a></li>
+      </ul>
+    </div>
+
+    <!-- Subscribe -->
+    <div>
+      <h3 class="text-lg font-semibold mb-4 text-[#D2B48C]">Subscribe</h3>
+      <form class="flex flex-col space-y-3">
+        <input type="email" placeholder="Your Email" class="bg-[#D2B48C] text-[#5C4033] p-2 rounded-md placeholder:text-[#5C4033]">
+        <button type="submit" class="bg-white text-[#5C4033] font-semibold py-2 rounded-md hover:bg-[#f5e1c3] transition">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Share Button -->
+<div class="text-center mt-6">
+  <button onclick="shareWebsite()" class="bg-[#D2B48C] text-white font-semibold px-6 py-2 rounded-full hover:bg-[#D2B48C] transition transform hover:scale-105">
+    Share Our Website
+  </button>
+</div>
+
+<script>
+  function shareWebsite() {
+    if (navigator.share) {
+      navigator.share({
+        title: "Anu’s Café + Cowork",
+        text: "Check out this cozy café and coworking spot!",
+        url: window.location.href,
+      }).catch((error) => console.log("Error sharing", error));
+    } else {
+      alert("Sharing not supported on this browser.");
+    }
+  }
+</script>
+
+<hr class="my-8 border-gray-600">
+
+ <!-- Footer bottom bar -->
+ <div class="text-center text-sm text-gray-400">
+  © 2025 Anu’s Café + Cowork | All rights reserved.
+</div>
+
+</footer>
+
+<!-- Scripts and Animations -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script src="https://kit.fontawesome.com/yourfontawesomekit.js" crossorigin="anonymous"></script> <!-- Replace with your FontAwesome Kit -->
+
+<script>
+  // Initialize AOS (Animate On Scroll)
+  AOS.init({
+    duration: 1000,
+    once: false, // animations repeat
+  });
+
+  // Hamburger Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('hidden');
+  });
+
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Typed Hero Animation (if needed for hero slogans)
+  var typed = new Typed('.auto-type', {
+    strings: ["Great Food.", "Cozy Ambiance.", "Perfect Work Space.", "Unforgettable Moments."],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+  });
+
+  // Review Auto Slider
+  const reviews = document.querySelectorAll('.review-slide');
+  let currentReview = 0;
+
+  function showReview(index) {
+    reviews.forEach((review, i) => {
+      review.classList.add('hidden');
+    });
+    reviews[index].classList.remove('hidden');
+  }
+
+  function nextReview() {
+    currentReview++;
+    if (currentReview >= reviews.length) currentReview = 0;
+    showReview(currentReview);
+  }
+
+  setInterval(nextReview, 4000); // Changes review every 4 seconds
+</script>
+
+<!-- AOS Library -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Custom Variables for Color Theme -->
+<style>
+  :root {
+    --primary-color: #6b4c3b; /* Dark Brown */
+    --secondary-color: #d7c4a3; /* Beige */
+    --background-light: #f5f5f5; /* Off-White */
+    --background-dark: #2d2d2d; /* Dark Gray */
+    --hover-color: #a67c52; /* Lighter Brown */
+  }
+</style>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" onclick="scrollToTop()" title="Go to top"
+  class="fixed bottom-5 right-5 z-50 bg-[#D2B48C] hover:bg-[#D2B48C] text-white p-3 rounded-full shadow-lg hidden transition transform hover:scale-110">
+  ↑
+</button>
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = () => {
+    if (document.documentElement.scrollTop > 300) {
+      scrollBtn.classList.remove("hidden");
+    } else {
+      scrollBtn.classList.add("hidden");
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
