@@ -1,73 +1,50 @@
-# Anus-Cafe-Website
+# ☕ Anu’s Café + Cowork Website
 
-Anu’s Café & Cowork – Website Summary
+## 🔗 Live Website
+👉 https://sarajadhav05.github.io/Anu-Cafe-Website/
 
-1. Business Brief
-• Business Name: Anu’s Café + Cowork
-• Owner: Anuja Sharma
-• Location: Wadgaon Budruk, Pune – 411041
-• Concept: Anu’s Café & Cowork is a warm, inviting space located in the heart of 
-the city, offering handcrafted beverages, fresh food, and a peaceful ambiance 
-for students, professionals, and creatives. The café doubles as a coworking 
-space, encouraging productivity and community over coffee and comfort.
+## 📌 About the Project
+This is a fully responsive and interactive website designed for "Anu’s Café + Cowork", a modern café combined with a co-working space.
 
-2. Website Goals
-• Create an engaging and visually appealing website that reflects the café’s 
-ambiance.
-• Provide clear information about the café, its menu, timings, and coworking 
-services.
-• Allow users to view photos, read reviews, and book tables online.
-• Promote the brand online through links to social media and food delivery 
-platforms.
-• Ensure responsiveness across all devices with fast loading times and smooth 
-animations.
+The website aims to provide users with an engaging digital experience while showcasing the café’s offerings, ambiance, and services.
 
-3. Target Audience
-• College students and young professionals looking for a relaxing café to work 
-or hang out.
-• Remote workers and freelancers in need of a cozy coworking spot.
-• Food lovers and coffee enthusiasts browsing cafés in their local area.
-• Event organisers seeking a casual space for small gatherings.
+## 🎯 Objectives
+- Create a visually appealing café website
+- Provide easy navigation for users
+- Enable booking and customer interaction
+- Showcase menu, gallery, and reviews
 
-4. Features Required
-• Hero Section with animated welcome message and call-to-action.
-• About Section introducing the café and owner’s story.
-• Dynamic Menu Section categorised with pricing and special offers.
-• Image Gallery showcasing food, beverages, and the café interior.
-• Customer Reviews for social proof.
-• Booking Form with fields for name, contact, date/time, and number of 
-persons.
-• Share Buttons for social platforms.
-• Interactive Footer with contact details, Google Maps, Swiggy, Instagram, 
-JustDial links.
-• Responsive design, scroll-based animations.
+## 🚀 Features
+- Hero section with engaging visuals
+- About & Owner Story section
+- Interactive Menu (Accordion style)
+- Image Gallery
+- Customer Reviews section
+- Booking form with validation
+- Social media integration
 
-5. Design Preferences
-• Color Palette:
-o Primary: Deep Coffee Brown
-o Secondary: Light Beige / Cream
-o Accents: Warm Yellow for highlights
-• Typography:
-o Playfair Display for elegant headings
-o Roboto for readable body text
-o Raleway for buttons and labels
-• Layout:
-o Clean, modern, and responsive grid-based layout.
-o Soft edges, animated transitions, and engaging visuals.
-• Branding:
-o Emphasises warmth, creativity, and a welcoming café culture.
-o Consistent use of logo, fonts, and colors throughout.
+## 🛠️ Tech Stack
+- HTML
+- Tailwind CSS
+- JavaScript
 
-6. Tools & Technologies Used
-• Frontend:
-o HTML5 for structure
-o Tailwind CSS for utility-first styling
-o JavaScript for interactivity and toggles
-o Bootstrap 5 for responsive components (selectively)
-• Animation Libraries:
-o AOS.js for scroll-based animations
-• Form Handling:
-o formsubmit.co for booking submissions
-• Other Tools:
-o Canva (for design assets and mockups)
-o Google Fonts (Playfair, Roboto, Raleway)
+## 🎨 Design Highlights
+- Smooth animations and transitions
+- Fully responsive design
+- Modern UI/UX principles
+
+## 📂 Project Structure
+- index.html
+- assets/
+- scripts/
+
+## ⭐️ Future Improvements
+- Backend integration for booking system
+- Payment gateway integration
+- Real-time availability system
+
+## 👩‍💻 Author
+Sara Jadhav  
+- Email: sarajadhav05@gmail.com
+- LinkedIn: https://www.linkedin.com/in/sara-jadhav-502378323?utm_source=share_via&utm_content=profile&utm_medium=member_ios
+- GitHub: https://github.com/SaraJadhav05
