@@ -17,7 +17,7 @@ The website aims to provide users with an engaging digital experience while show
 ## 🚀 Features
 - Hero section with engaging visuals
 - About & Owner Story section
-- Interactive Menu (Accordion style)
+- Interactive Menu
 - Image Gallery
 - Customer Reviews section
 - Booking form with validation
